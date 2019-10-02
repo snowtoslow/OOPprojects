@@ -13,7 +13,7 @@ public class Main {
         int maxSizeOfQueue = scanner.nextInt();
 
         Queue myQueueParams = new Queue(maxSizeOfQueue);
-        Queue myQueueNoParams = new Queue();
+        Queue myQueueNoParams = new Queue(3);
 
 
         //add elements to queue with parameters;
