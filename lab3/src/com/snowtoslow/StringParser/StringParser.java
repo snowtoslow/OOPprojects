@@ -36,7 +36,7 @@ public class StringParser {
 
         //ArrayList<Integer> newArray = new ArrayList<Integer>();
         HashMap<String, Integer> placeOfPastrare = new HashMap<>();
-        ArrayList<Integer> placeOfSorting = new ArrayList<Integer>();
+
 
 
         for(int i=0;i<words.length;i++) //Outer loop for Comparison
@@ -50,7 +50,7 @@ public class StringParser {
                     words[j]="0"; //Replace repeated words by zero
                 }
             }
-            if(words[i]!="0")
+            if(!words[i].equals("0"))
                 //System.out.println(words[i]+"----->"+wrc); //Printing the word along with count
                 placeOfPastrare.put(words[i],wrc);
             wrc=1;
