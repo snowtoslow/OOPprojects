@@ -31,7 +31,7 @@ public class StringParser {
     }
 
 
-    public void countTop5(String text) {
+    public void printTop5(String text) {
         String[] words = text.split(" ");
         int wrc = 1;
 
