@@ -6,6 +6,7 @@ import java.util.*;
 public class StringParser {
 
     private int count = 0;
+
     public void getNrOfLetters(String text) {
         for (int i = 0; i < text.length(); i++) {
             count = i;
@@ -30,35 +31,46 @@ public class StringParser {
     }
 
 
-    public void countTop5(String text){
-        String[] words=text.split(" ");  //Split the word from String
-        int wrc=1;    //Variable for getting Repeated word count
+    public void countTop5(String text) {
+        String[] words = text.split(" ");
+        int wrc = 1;
 
-        //ArrayList<Integer> newArray = new ArrayList<Integer>();
         HashMap<String, Integer> placeOfPastrare = new HashMap<>();
+        ArrayList<Integer> listOfTop5 = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
 
-
-
-        for(int i=0;i<words.length;i++) //Outer loop for Comparison
-        {
-            for(int j=i+1;j<words.length;j++) //Inner loop for Comparison
-            {
-
-                if(words[i].equals(words[j]))  //Checking for both strings are equal
-                {
-                    wrc=wrc+1;    //if equal increment the count
-                    words[j]="0"; //Replace repeated words by zero
+        for (int i = 0; i < words.length; i++) {
+            for (int j = i + 1; j < words.length; j++) {
+                if (words[i].equals(words[j])) {
+                    wrc = wrc + 1;    //if equal increment the count
+                    words[j] = "0"; //Replace repeated words by zero
                 }
             }
-            if(!words[i].equals("0"))
-                //System.out.println(words[i]+"----->"+wrc); //Printing the word along with count
-                placeOfPastrare.put(words[i],wrc);
-            wrc=1;
+            if (!words[i].equals("0"))
+                placeOfPastrare.put(words[i], wrc);
+            wrc = 1;
 
         }
-        System.out.println(placeOfPastrare);
 
 
+        //add values to a list;
+        for (int i : placeOfPastrare.values()) {
+            list.add(i);
+        }
+        Collections.sort(list, Collections.reverseOrder());
+
+        //print first top 5 values:
+        for (int i = 0; i < 5; i++) {
+            listOfTop5.add(list.get(i));
+        }
+        System.out.println("Top Repeated Words:");
+        for (int top : listOfTop5) {
+            for (Map.Entry<String, Integer> entry : placeOfPastrare.entrySet()) {
+                if (entry.getValue().equals(top)){
+                    System.out.println("**" + entry.getKey() + "--->" + top);
+                }
+            }
+        }
     }
 }
 
