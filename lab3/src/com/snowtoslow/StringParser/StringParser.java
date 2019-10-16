@@ -37,7 +37,6 @@ public class StringParser {
 
         HashMap<String, Integer> placeOfPastrare = new HashMap<>();
         ArrayList<Integer> listOfTop5 = new ArrayList<>();
-        ArrayList<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < words.length; i++) {
             for (int j = i + 1; j < words.length; j++) {
@@ -52,11 +51,7 @@ public class StringParser {
 
         }
 
-
-        //add values to a list;
-        for (int i : placeOfPastrare.values()) {
-            list.add(i);
-        }
+        ArrayList<Integer> list = new ArrayList<>(placeOfPastrare.values());
         Collections.sort(list, Collections.reverseOrder());
 
         //print first top 5 values:
