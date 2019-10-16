@@ -48,7 +48,6 @@ public class StringParser {
             if (!words[i].equals("0"))
                 placeOfPastrare.put(words[i], wrc);
             wrc = 1;
-
         }
 
         ArrayList<Integer> list = new ArrayList<>(placeOfPastrare.values());
