@@ -1,7 +1,9 @@
 package com.snowtoslow.geometricalManipulation;
 
-public class Parallelepiped extends GeometricBody {
+public class Parallelepiped implements GeometricBody{
 
+    private double result;
+    private String name;
 
     @Override
     public double getVolume() {
@@ -23,11 +25,11 @@ public class Parallelepiped extends GeometricBody {
 
     @Override
     public String getName() {
-        return super.getName();
+        return name;
     }
 
     @Override
-    public void setName(String name) {
-        super.setName(name);
+    public void setName(String name){
+        this.name = name;
     }
 }

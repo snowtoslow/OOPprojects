@@ -1,8 +1,11 @@
 package com.snowtoslow.geometricalManipulation;
 
-public class Cub extends GeometricBody {
+public class Cub implements GeometricBody{
 
 
+    private String name;
+
+    private double result;
 
     @Override
     public double getVolume() {
@@ -22,11 +25,13 @@ public class Cub extends GeometricBody {
 
     @Override
     public String getName() {
-        return super.getName();
+        return name;
     }
 
     @Override
-    public void setName(String name) {
-        super.setName(name);
+    public void setName(String name){
+        this.name = name;
     }
+
+
 }
