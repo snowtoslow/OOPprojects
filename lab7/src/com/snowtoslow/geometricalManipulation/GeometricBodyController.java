@@ -8,36 +8,44 @@ public class GeometricBodyController {
 
     public double maxValue = 0;
 
-    public void getMaximumArea(ArrayList<GeometricBody> list){
+    public double maxValue2 = 0;
 
-        for (GeometricBody body : list) {
-            if (body.getArea() > maxValue) {
-                maxValue = body.getArea();
+    public String nameOfObject = "";
+
+
+    public void getMaximumArea(ArrayList<GeometricBody> lisForArea){
+
+        for (GeometricBody body : lisForArea) {
+            if (body.getArea() > maxValue2) {
+                maxValue2 = body.getArea();
             }
         }
-        System.out.println("Maximum Area: " + maxValue);
-        for (GeometricBody geometricBody : list) {
-            if (geometricBody.getArea() == maxValue) {
-                System.out.println(list.get(list.indexOf(geometricBody)));
+        for (GeometricBody geometricBodyArea : lisForArea) {
+            if (geometricBodyArea.getArea() == maxValue2) {
+                System.out.println("Maximum Area: " + geometricBodyArea.getName() + " --> " + geometricBodyArea.getArea() + " units");
             }
         }
     }
 
-    public void getMaximumVolume(ArrayList<GeometricBody> list){
+    public void getMaximumVolume(ArrayList<GeometricBody> listForVolume){
 
-        for (GeometricBody body : list) {
+
+        for (GeometricBody body : listForVolume) {
             if (body.getVolume() > maxValue) {
                 maxValue = body.getVolume();
             }
         }
-
-        System.out.println("Maximum Volume:" + maxValue);
-        for (GeometricBody geometricBody : list) {
+        for (GeometricBody geometricBody : listForVolume) {
             if (geometricBody.getVolume() == maxValue) {
-                System.out.println(list.get(list.indexOf(geometricBody)));
+                System.out.println("Maximum Volume: " + geometricBody.getName() + " --> " + geometricBody.getVolume() + " units");
             }
         }
     }
+
+    //tak kak eu am aishi ceva cu random si Dorin vrea sa verifice daca este totul ok;
+
+
+
 
 
 

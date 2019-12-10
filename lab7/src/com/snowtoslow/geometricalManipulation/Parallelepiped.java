@@ -21,5 +21,13 @@ public class Parallelepiped extends GeometricBody {
 
     }
 
+    @Override
+    public String getName() {
+        return super.getName();
+    }
 
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+    }
 }
