@@ -2,38 +2,31 @@ package com.snowtoslow.geometricalManipulation;
 
 import java.util.Random;
 
-public abstract class GeometricBody {
+public interface GeometricBody {
 
-    public String name;
+    double getVolume();
 
-    public abstract double getVolume();
+    double getArea();
 
-    public abstract double getArea();
-
-    public static final float pi = 3.14f;
+    float pi = 3.14f;
 
     Random random = new Random();
 
 
-    final double Length = random.nextInt(10);
+    double Length = random.nextInt(10);
 
-    final double Width = random.nextInt(10);
+    double Width = random.nextInt(10);
 
-    final double Height = random.nextInt(10);
+    double Height = random.nextInt(10);
 
-    final double cubEDge = random.nextInt(10);
+    double cubEDge = random.nextInt(10);
 
-    final double sphereRadius = random.nextInt(10);
+    double sphereRadius = random.nextInt(10);
 
-    double result;
 
-    public String getName() {
-        return name;
-    }
+    String getName();
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    void setName(String name);
 
 
 }

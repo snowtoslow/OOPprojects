@@ -1,8 +1,9 @@
 package com.snowtoslow.geometricalManipulation;
 
-public class Sphere extends GeometricBody {
+public class Sphere implements GeometricBody{
 
-
+    private double result;
+    private String name;
 
     @Override
     public double getVolume() {
@@ -20,14 +21,15 @@ public class Sphere extends GeometricBody {
         return result;
     }
 
-
     @Override
     public String getName() {
-        return super.getName();
+        return name;
     }
 
     @Override
-    public void setName(String name) {
-        super.setName(name);
+    public void setName(String name){
+        this.name = name;
     }
+
+
 }

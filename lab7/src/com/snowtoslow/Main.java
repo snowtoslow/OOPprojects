@@ -6,6 +6,7 @@ import com.snowtoslow.geometricalManipulation.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 
 public class Main {
@@ -16,22 +17,22 @@ public class Main {
 
         Cub cub = new Cub();
         cub.setName("cub1");
-        Cub cub2 = new Cub();
-        cub2.setName("cub2");
         Sphere sphere = new Sphere();
-        sphere.setName("sphere");
+        sphere.setName("sphere1");
         Parallelepiped parallelepiped = new Parallelepiped();
         parallelepiped.setName("paralelipiped");
         GeometricBodyController geometricBodyController = new GeometricBodyController();
 
         ArrayList<GeometricBody> geometricBodies = new ArrayList<>();
         geometricBodies.add(cub);
-        geometricBodies.add(cub2);
         geometricBodies.add(parallelepiped);
         geometricBodies.add(sphere);
 
+
         geometricBodyController.getMaximumVolume(geometricBodies);
         geometricBodyController.getMaximumArea(geometricBodies);
+
+
 
 
 
